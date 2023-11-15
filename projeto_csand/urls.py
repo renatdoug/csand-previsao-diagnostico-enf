@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+from nursediagpredictor.views import csand, login
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("login/", login),
+    path("csand/", csand),
 ]
